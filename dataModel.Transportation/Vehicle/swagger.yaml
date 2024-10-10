@@ -1,0 +1,72 @@
+---
+components:
+  schemas: 
+    Vehicle:
+      type: object
+      description: |
+        This entity contains a description of the state of Vehicles over time. This entity is associated with the vertical segments of  smart cities and related IoT applications.
+        This data model has been partially developed based on the "Vehicle" data model available on the SmartDataModels database.
+        It is an extension of the data model and introduces the following changes:
+        
+        - The field `vehicleType`, `location` and `category` are no longer required since they don't add additional required information in our system.
+        - The field `observationDateTime` is changed to `dateObserved` and is now required.
+              
+        
+      allOf:
+        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.Transportation/Vehicle/model.yaml#/Vehicle"
+
+      properties:
+        dateObserved:
+          description: Last reported time of observation.
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+      required:
+        - dateObserved
+
+info:
+  description: |
+    An extended observation of the state of Vehicles at a certain place and time, based on the SmartDataModel Vehicle
+  title: Vehicle
+  version: "0.0.1"
+
+openapi: "3.0.0"
+
+paths: 
+  /ngsi-ld/v1/entities: 
+    get: 
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system."
+      parameters: 
+        - 
+          in: query
+          name: type
+          required: true
+          schema: 
+            enum: 
+              - Vehicle
+            type: string
+      responses: 
+        "200":
+          description: OK
+          content: 
+            application/ld+json: 
+              examples: 
+                keyvalues: 
+                  summary: "Key-Values Pairs"
+                  value: 
+                    - 
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/examples/example.json"
+                normalized: 
+                  summary: "Normalized NGSI-LD"
+                  value: 
+                    - 
+                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/Vehicle/examples/example-normalized.jsonld"
+      tags: 
+        - ngsi-ld
+
+tags: 
+  - 
+    description: "NGSI-LD Linked-data Format"
+    name: ngsi-ld

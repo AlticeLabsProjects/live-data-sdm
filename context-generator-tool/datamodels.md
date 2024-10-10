@@ -1,0 +1,146 @@
+# Streetlight
+
+This entity contains a description of the power consumption of street lights. 
+This data model is an extension of the smart data model "Streetlight".
+The following changes have been made to meet some of our requirements:
+- required fields  `location` and `status` are no longer required.
+- `observationDateTime` field has been changed to `dateObserved` to keep consistency between models.
+
+-  `address`: The mailing address
+   -  Attribute type: **Property**. [address](https://schema.org/address)
+   -  Optional
+-  `alternateName`: An alternative name for this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `annotations`: Annotations about the item
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `areaServed`: The geographic area where a service or offered item is provided
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `circuit`: The circuit to which this streetlight connects to and gets power from. Typically it will contain an identifier that will allow to obtain more information about such circuit
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `color`: The color of the product
+   -  Attribute type: **Property**. [color](https://schema.org/color)
+   -  Optional
+-  `controllingMethod`: The method used to control this streetlight. Enum:'group, individual'.. One of : `group`, `individual`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `current`: Current value of the streetlight corresponding to this observation
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateLastLampChange`: Timestamp of the last change of lamp made
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `dateLastSwitchingOff`: Timestamp of the last switching off
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `dateLastSwitchingOn`: Timestamp of the last switching on
+   -  Attribute type: **Property**. [DateTime](https://schema.org/DateTime)
+   -  Optional
+-  `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `dateServiceStarted`: Date at which the streetlight started giving service
+   -  Attribute type: **Property**. [Date](https://schema.org/Date)
+   -  Optional
+-  `description`: A description of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `deviceInfo`: Information about the device associated with the observations
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `feederID`: Unique ID of the streetlight feeder panel associated with the streetlight corresponding to this observation
+   -  Attribute type: **Relationship**. [Text](https://schema.org/Text)
+   -  Optional
+-  `feederPillarNum`: Streetlight feeder pillar information associated with the streetlight corresponding to this observation
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `id`: Unique identifier of the entity
+   -  Attribute type: **Property**. 
+   -  Required
+-  `illuminanceLevel`: Relative illuminance level setting. A number between 0 and 1
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `image`: An image of the item
+   -  Attribute type: **Property**. [URL](https://schema.org/URL)
+   -  Optional
+-  `lanternHeight`: Lantern's height. In columns with many arms this can vary between streetlights. Another variation source of this property are wall-mounted streetlights
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `lifetimeMotionDetected`: Accumulated count of motion detections
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `lifetimePowerConsumption`: Total power consumed by the device over its entire operational lifespan
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
+   -  Attribute type: **GeoProperty**. 
+   -  Optional
+-  `locationCategory`: Category of the location where the streetlight is placed. Enum:'bridge, centralIsland, facade, garden, park, parking, pedestrianPath, playground, road, sidewalk, tunnel'. One of : `bridge`, `centralIsland`, `facade`, `garden`, `park`, `parking`, `pedestrianPath`, `playground`, `road`, `sidewalk`, `tunnel`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `municipalityInfo`: Municipality information corresponding to this observation
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `name`: The name of this item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `powerConsumption`: Power consumed by the LED or the streetlight bulb corresponding to this observation
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `powerFactor`: Power factor or the ratio of working power of the streetlight corresponding to this observation
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `powerRating`: Power rating of the LED or the streetlight bulb corresponding to this observation
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `powerState`: Streetlight's power state. Enum:'bootingUp, low, off, on'. One of : `bootingUp`, `low`, `off`, `on`.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `refDevice`: Reference to the device(s) used to monitor this streetligth. List of Reference to entity(ies) of type Device
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `refStreetlightControlCabinet`: If this streetlight is individually controlled, reference to the control cabinet in charge of
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `refStreetlightGroup`: Streetlight's group, if this streetlight belongs to any group
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `refStreetlightModel`: Streetlight's model
+   -  Attribute type: **Relationship**. 
+   -  Optional
+-  `seeAlso`: list of uri pointing to additional resources about the item
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `status`: The overall status of this street light. Enum:'brokenLantern, columnIssue, defectiveLamp, ok'. One of : `brokenLantern`, `columnIssue`, `defectiveLamp`, `ok`.
+   -  Attribute type: **Property**. 
+   -  Optional
+-  `streetPoleNum`: Street pole information associated with the streetlight corresponding to this observation
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Optional
+-  `type`: NGSI Entity type. It has to be Streetlight. One of : `Streetlight`.
+   -  Attribute type: **Property**. 
+   -  Required
+-  `voltage`: Voltage value of the streetlight corresponding to this observation
+   -  Attribute type: **Property**. [Number](https://schema.org/Number)
+   -  Optional
+-  `dateObserved`: Observation time.
+   -  Attribute type: **Property**. [Text](https://schema.org/Text)
+   -  Required
+
+
+
