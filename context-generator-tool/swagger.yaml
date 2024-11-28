@@ -1,76 +1,19 @@
 ---
 components:
   schemas: 
-    TrafficFlowObserved: 
+    Device: 
       type: object
       description: |
-        This entity contains a description of a TrafficFlowObservation. 
-        This data model is an extension of the smart data model "TrafficFlowObservation" ("https://github.com/smart-data-models/dataModel.Transportation/tree/master/TrafficFlowObserved")
-        Changes to the previous implemented model are the addition of the following properties:
-        - endNode
-        - delay
-        - level
-        - length
-        - refAlert
-        - roadType
+        An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.).
       
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.Transportation/TrafficFlowObserved/model.yaml#/TrafficFlowObserved"
-
-      properties:
-        endNode:
-          description: "Street/Local where the traffic observation has ended"
-          type: string
-          x-ngsi:
-            model: https://schema.org/Text
-            type: Property
-        delay:
-          description: "Time delay in minutes the traffic has been generating"
-          type: number
-          x-ngsi:
-            model: https://schema.org/Number
-            type: Property
-        level:
-          description: "Level of severity of the traffic congestion"
-          type: number
-          x-ngsi:
-            model: https://schema.org/Number
-            type: Property
-        length:
-          description: "Length of the traffic registered"
-          type: number
-          x-ngsi:
-            model: https://schema.org/Number
-            type: Property
-        refAlert:
-          anyOf:
-            - description: Identifier format of any NGSI entity
-              maxLength: 256
-              minLength: 1
-              pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-              type: string
-              x-ngsi:
-                type: Property
-            - description: Identifier format of any NGSI entity
-              format: uri
-              type: string
-              x-ngsi:
-                type: Property
-          description: A reference to an alert associated to this observation
-          x-ngsi:
-            model: https://schema.org/URL
-            type: Relationship
-        roadType:
-          description: "A specific type of road mapped to a number."
-          type: number
-          x-ngsi:
-            model: https://schema.org/Number
-            type: Property
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Device/Device/model.yaml#/Device"
 
 info:
   description:  |
-    An observation of traffic flow conditions at a certain place and time.
-  title: TrafficFlowObserved
+    An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.).
+
+  title: Device
   version: "0.0.1"
 openapi: "3.0.0"
 
@@ -85,7 +28,7 @@ paths:
           required: true
           schema: 
             enum: 
-              - TrafficFlowObserved
+              - Device
             type: string
       responses: 
         ? "200"
@@ -97,12 +40,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/examples/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.Device/Device/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.Transportation/TrafficFlowObserved/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.Device/Device/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld
