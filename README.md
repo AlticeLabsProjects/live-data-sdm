@@ -30,10 +30,12 @@ The repo also contains at the base level a context generation tool used whenever
 #### 5.3. Vehicle
 ### 6. Weather
 #### 6.1. WeatherObserved
+### 7. Device
+#### 6.1. Device
 #
 #
 #
 #
 #
-### (Last Updated: 10/10/2024)
+### (Last Updated: 28/11/2024)
 
