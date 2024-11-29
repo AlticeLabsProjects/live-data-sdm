@@ -17,7 +17,7 @@ components:
         - `particulesMass` is an additional field added.
         
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.Environment/AirQualityObserved/model.yaml#/AirQualityObserved"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Environment/AirQualityObserved/model.yaml#/AirQualityObserved"
 
       properties:
         pm7:

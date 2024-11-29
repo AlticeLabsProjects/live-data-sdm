@@ -12,6 +12,13 @@ subject repository is then aggregated into domain repositories.
 ## Context Generator tool 
 The repo also contains at the base level a context generation tool used whenever a new data model is added to a certain domain. This generator has been provided by the Fiware open source platform and it can be accessed [HERE](https://github.com/FIWARE/tutorials.Understanding-At-Context/tree/NGSI-LD?tab=readme-ov-file#autogenerating-context-files-from-swagger).
 
+### Steps to user Context generator tool
+### To run the tool one needs to be in the folder context-generator-tool
+1. If the image is not locally run "./services create"
+2. Change the swagger.yaml file with the desired dataModel info.
+3. Run "./services ngsi swagger.yaml" to generate a context.jsonld file.
+It is possible that it requires to first commit the changes to the repo before generating the context.jsonld since the model file needs to be in the repo.
+
 ## Currently available domains and their models.
 
 ### 1. Alert
@@ -32,6 +39,8 @@ The repo also contains at the base level a context generation tool used whenever
 #### 6.1. WeatherObserved
 ### 7. Device
 #### 6.1. Device
+### 8. Parking
+#### 8.1. ParkingSpot
 #
 #
 #

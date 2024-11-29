@@ -12,7 +12,7 @@ components:
               
         
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.Transportation/BikeHireDockingStation/model.yaml#/BikeHireDockingStation"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Transportation/BikeHireDockingStation/model.yaml#/BikeHireDockingStation"
 
       properties:
         dateObserved:

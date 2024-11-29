@@ -21,7 +21,7 @@ components:
           - `capacitiveRTransformationLosses`
         
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.EnergyCIM/EnergyConsumer/model.yaml#/EnergyConsumer"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.EnergyCIM/EnergyConsumer/model.yaml#/EnergyConsumer"
 
       properties:
         dateObserved:

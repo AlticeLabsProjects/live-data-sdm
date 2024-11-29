@@ -13,7 +13,7 @@ components:
         - id, type and dateObserved are now required fields.
         
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.EnergyCIM/EnergySource/model.yaml#/EnergySource"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.EnergyCIM/EnergySource/model.yaml#/EnergySource"
 
       properties:
         dateObserved:

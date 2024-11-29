@@ -20,7 +20,7 @@ components:
         For a full description of the following attributes refer to GSMA [IoT Big Data Harmonised Data Model](https://github.com/GSMADeveloper/NGSI-LD-Entities) WeatherObserved Entity.
     
       allOf:
-        - $ref: "https://filipe-b-lopes-alb.github.io/dataModel.Weather/WeatherObserved/model.yaml#/WeatherObserved"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Weather/WeatherObserved/model.yaml#/WeatherObserved"
 
       properties:
         precipitationCounter:

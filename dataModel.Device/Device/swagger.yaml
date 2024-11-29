@@ -4,10 +4,24 @@ components:
     Device: 
       type: object
       description: |
-        An apparatus (hardware + software + firmware) intended to accomplish a particular task (sensing the environment, actuating, etc.).
-      
+        This entity contains a description of the state of a Device. This entity is associated with the vertical segments of  smart cities and related IoT applications.
+        This data model has been partially developed based on the "Device" data model available on the SmartDataModels database.
+        It is an extension of the data model and introduces the following changes:
+        - Addition of the field "dateObserved" to record the timestamp of the entry.
+        - Required fields has been reduced to only "id", "type" and "dateObserved".
+        
       allOf:
         - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Device/Device/model.yaml#/Device"
+      properties:
+        dateObserved:
+          description: Last reported time of observation.
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+      required:
+        - dateObserved
 
 info:
   description:  |
