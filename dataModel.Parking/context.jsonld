@@ -1,0 +1,33 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "ParkingSpot": "fiware:ParkingSpot",
+        "address": "fiware:address",
+        "alternateName": "fiware:alternateName",
+        "annotations": "fiware:annotations",
+        "areaServed": "fiware:areaServed",
+        "category": "fiware:category",
+        "color": "fiware:color",
+        "dataProvider": "fiware:dataProvider",
+        "dateCreated": "fiware:dateCreated",
+        "dateModified": "fiware:dateModified",
+        "dateObserved": "fiware:dateObserved",
+        "description": "fiware:description",
+        "image": "fiware:image",
+        "length": "fiware:length",
+        "location": "fiware:location",
+        "name": "fiware:name",
+        "owner": "fiware:owner",
+        "refDevice": "fiware:refDevice",
+        "refParkingGroup": "fiware:refParkingGroup",
+        "refParkingSite": "fiware:refParkingSite",
+        "seeAlso": "fiware:seeAlso",
+        "source": "fiware:source",
+        "status": "fiware:status",
+        "width": "fiware:width"
+    }
+}

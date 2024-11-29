@@ -17,7 +17,10 @@ The repo also contains at the base level a context generation tool used whenever
 1. If the image is not locally run "./services create"
 2. Change the swagger.yaml file with the desired dataModel info.
 3. Run "./services ngsi swagger.yaml" to generate a context.jsonld file.
-It is possible that it requires to first commit the changes to the repo before generating the context.jsonld since the model file needs to be in the repo.
+
+*This requires that the given model.yaml is already on the repo*
+Example generation:
+./services ngsi swagger.yaml
 
 ## Currently available domains and their models.
 
