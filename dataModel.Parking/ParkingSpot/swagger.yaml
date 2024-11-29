@@ -9,6 +9,9 @@ components:
         It is an extension of the data model and introduces the following changes:
         - Addition of the field "dateObserved" to register the timestamp of entry.
         - Required fields has been reduced to "id", "type" and "dateObserved".
+        - Added field "startDate"
+        - Added field "endDate"
+        - Added field "duration"
         
       allOf:
         - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Parking/ParkingSpot/model.yaml#/ParkingSpot"
@@ -20,6 +23,26 @@ components:
           type: string
           x-ngsi:
             model: https://schema.org/DateTime
+            type: Property
+        startDate:
+          description: Last reported time of observation.
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+        endDate:
+          description: Last reported time of observation.
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+        duration:
+          description: Duration of the parking.
+          type: number
+          x-ngsi:
+            model: https://schema.org/Number
             type: Property
       required:
         - dateObserved

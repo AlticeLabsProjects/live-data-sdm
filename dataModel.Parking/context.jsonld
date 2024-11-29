@@ -17,6 +17,8 @@
         "dateModified": "fiware:dateModified",
         "dateObserved": "fiware:dateObserved",
         "description": "fiware:description",
+        "duration": "fiware:duration",
+        "endDate": "fiware:endDate",
         "image": "fiware:image",
         "length": "fiware:length",
         "location": "fiware:location",
@@ -27,6 +29,7 @@
         "refParkingSite": "fiware:refParkingSite",
         "seeAlso": "fiware:seeAlso",
         "source": "fiware:source",
+        "startDate": "fiware:startDate",
         "status": "fiware:status",
         "width": "fiware:width"
     }
