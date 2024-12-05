@@ -12,7 +12,9 @@ components:
         
         - The field `dateIssued` is changed to `dateObserved` to keep consistency with other models.
 
-        - The field "subCategory" contains an additional value in the enum "accident" that is considered a general accident
+        - The Enum field "subCategory" has been changed to "category".
+
+        - The field "subCategory" now is not an enum but contains additional information complementing the "category" field.
       
 
       allOf:

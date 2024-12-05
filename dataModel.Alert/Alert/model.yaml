@@ -83,19 +83,6 @@ Alert:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-    category:
-      description: 'Category of the Alert. Enum:''traffic, naturalDisaster, weather, environment, health, security, agriculture'''
-      enum:
-        - traffic
-        - naturalDisaster
-        - weather
-        - environment
-        - health
-        - security
-        - agriculture
-      type: string
-      x-ngsi:
-        type: Property
     data:
       description: Payload containing the data retrieved
       type: object
@@ -360,7 +347,7 @@ Alert:
       type: string
       x-ngsi:
         type: Property
-    subCategory:
+    category:
       anyOf:
         - enum:
             - airPollution
@@ -454,6 +441,11 @@ Alert:
           x-ngsi:
             type: Property
       description: 'Describe the sub category of alert. Enum:''trafficJam, carAccident, carWrongDirection, carStopped, pothole, roadClosed, roadWorks, hazardOnRoad, injuredBiker, pedestrianOnRoad, bikerOnRoad, tramApproaching, flood, tsunami, coastalEvent, earthquake, rainfall, highTemperature, lowTemperature, heatWave, coldWave, ice, snow, wind, fog, tornado, tropicalCyclone, hurricane, snow/ice, thunderstorms, fireRisk, avalancheRisk, floodRisk, airPollution, waterPollution, pollenConcentration, asthmaAttack, bumpedPatient, fallenPatient, heartAttack, suspiciousAction, robbery, assault, civilDisorder, buildingFire, forestFire, noxiousWeed, snail, insect, rodent, bacteria, microbe, fungus,mite, virus, nematodes, irrigation, fertilisation'
+      type: string
+      x-ngsi:
+        type: Property
+    subCategory:
+      description: Additional information to the "category" field
       type: string
       x-ngsi:
         type: Property
