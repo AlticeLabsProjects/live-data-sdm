@@ -72,6 +72,7 @@
         "vehiclePlateIdentifier": "fiware:vehiclePlateIdentifier",
         "vehicleRunningStatus": "fiware:vehicleRunningStatus",
         "vehicleSpecialUsage": "fiware:vehicleSpecialUsage",
+        "vehicleSubType": "fiware:vehicleSubType",
         "vehicleTrackerDevice": "fiware:vehicleTrackerDevice",
         "vehicleType": "fiware:vehicleType",
         "wardId": "fiware:wardId",
@@ -80,6 +81,7 @@
         "addressCountry": "fiware:addressCountry",
         "addressLocality": "fiware:addressLocality",
         "addressRegion": "fiware:addressRegion",
+        "averageCrowdSpeed": "fiware:averageCrowdSpeed",
         "averageGapDistance": "fiware:averageGapDistance",
         "averageHeadwayTime": "fiware:averageHeadwayTime",
         "averageVehicleLength": "fiware:averageVehicleLength",
@@ -99,6 +101,6 @@
         "reversedLane": "fiware:reversedLane",
         "streetAddress": "fiware:streetAddress",
         "streetNr": "fiware:streetNr",
-        "vehicleSubType": "fiware:vehicleSubType"
+        "peopleCount": "fiware:peopleCount"
     }
 }
