@@ -1,0 +1,52 @@
+components:
+  schemas:
+    SmartPole:
+      type: object
+      description: |
+        This entity contains a description of the state of a SmartPole.
+        This Smart Data Model is designed for smart city contexts, where a smart pole collects environmental and energy-related data.
+        It includes five primary observed parameters: battery level, light percentage, power production, temperature, and wind.
+      allOf:
+        - $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.SmartEnvironment/main/SmartPole/model.yaml#/SmartPole"
+      properties:
+        dateObserved:
+          description: Last reported time of observation.
+          format: date-time
+          type: string
+          x-ngsi:
+            model: https://schema.org/DateTime
+            type: Property
+      required:
+        - dateObserved
+
+info:
+  title: SmartPole
+  description: |
+    A SmartPole entity representing environmental and energy sensor data collected by an intelligent street pole.
+  version: "0.0.1"
+
+openapi: "3.0.0"
+
+paths:
+  /ngsi-ld/v1/entities:
+    get:
+      description: "Retrieve a set of entities which matches a specific query from an NGSI-LD system"
+      parameters:
+        - in: query
+          name: type
+          required: true
+          schema:
+            enum:
+              - SmartPole
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/ld+json: {}
+      tags:
+        - ngsi-ld
+
+tags:
+  - name: ngsi-ld
+    description: "NGSI-LD Linked-data Format"

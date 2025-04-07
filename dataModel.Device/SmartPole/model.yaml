@@ -1,0 +1,49 @@
+SmartPole:
+  description: A SmartPole entity representing environmental and energy sensor data collected by an intelligent street pole.
+  properties:
+    batteryLevel:
+      description: Current voltage level of the battery.
+      type: number
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Number
+    lightPercentage:
+      description: Percentage of detected light.
+      type: number
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Number
+    powerProduction:
+      description: Power production of the SmartPole in kilowatts. Negative values may indicate consumption.
+      type: number
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Number
+    temperature:
+      description: Ambient temperature measured near the SmartPole.
+      type: number
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Number
+    wind:
+      description: Wind speed measured at the SmartPole location.
+      type: number
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Number
+  required:
+    - batteryLevel
+    - lightPercentage
+    - powerProduction
+    - temperature
+    - wind
+  type: object
+  x-derived-from: ""
+  x-license-url: https://creativecommons.org/licenses/by/4.0/
+  x-model-version: 0.0.1
+  x-status: draft
+  x-tags:
+    - energy
+    - environment
+    - smart city
+    - IoT
