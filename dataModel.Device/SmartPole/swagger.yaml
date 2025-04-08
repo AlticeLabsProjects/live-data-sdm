@@ -7,7 +7,7 @@ components:
         This Smart Data Model is designed for smart city contexts, where a smart pole collects environmental and energy-related data.
         It includes five primary observed parameters: battery level, light percentage, power production, temperature, and wind.
       allOf:
-        - $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.SmartEnvironment/main/SmartPole/model.yaml#/SmartPole"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Device/SmartPole/model.yaml#/SmartPole"
       properties:
         dateObserved:
           description: Last reported time of observation.
