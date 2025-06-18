@@ -30,49 +30,49 @@ components:
           type: string
           x-ngsi:
             type: Property
-        pStatus:
+        activePowerStatus:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        pTransformationLosses:
+        activePowerTransformationLosses:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        rStatus:
+        reactivePowerStatus:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        rTransformationLosses:
+        reactivePowerTransformationLosses:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        capacitiveR:
+        capacitiveReactivePower:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        capacitiveRStatus:
+        capacitiveReactivePowerStatus:
           description: ''
           type: number
           format: float
           x-ngsi:
             model: https://schema.org/Number
             type: Property
-        capacitiveRTransformationLosses:
+        capacitiveReactivePowerTransformationLosses:
           description: ''
           type: number
           format: float
