@@ -1,20 +1,27 @@
 ---
 components:
   schemas: 
-    EnergyConsumer:
+    ThreePhaseAcMeasurement:
       type: object
       description: |
-        This entity contains a description of energy consumption over time. This entity is associated with the vertical segments of  smart cities and related IoT applications.
-        This data model has been partially developed based on the "EnergyConsumer" data model available on the SmartDataModels database that has been extended based on the CIM Energy modules 
+        This entity contains a description of energy consumption over time by a system that uses three phase alternating current. This entity is associated with the vertical segments of  smart cities and related IoT applications.
+        This data model has been partially developed based on the "ThreePhaseAcMeasurement" data model available on the SmartDataModels database that has been extended based on the CIM Energy modules 
         to comply with NGSI requirements..
         It is an extension of the data model and introduces the following changes:
         
         - Added field `dateObserved` to register the observation time of the entity.
         - id, type and dateObserved are now required fields.
-    
-        
+        - The following fields have been added to accomodate our requirements:
+          - `activePowerStatus`
+          - `activePowerTransformationLosses`
+          - `reactivePowerStatus`
+          - `reactivePowerTransformationLosses`
+          - `capacitiveReactivePower`
+          - `capacitiveReactivePowerStatus`,
+          - `capacitiveReactivePowerTransformationLosses`
+       
       allOf:
-        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.EnergyCIM/EnergyConsumer/model.yaml#/EnergyConsumer"
+        - $ref: "https://raw.githubusercontent.com/AlticeLabsProjects/live-data-sdm/main/dataModel.Energy/ThreePhaseAcMeasurement/model.yaml#/ThreePhaseAcMeasurement"
 
       properties:
         dateObserved:
@@ -81,8 +88,8 @@ components:
 
 info:
   description: |
-    An extended observation of energy consumed at a certain time, based on the SmartDataModel EnergyConsumer.
-  title: EnergyConsumer
+    An extended observation of energy consumed at a certain time, based on the SmartDataModel ThreePhaseAcMeasurement.
+  title: ThreePhaseAcMeasurement
   version: "0.0.1"
 
 openapi: "3.0.0"
@@ -98,7 +105,7 @@ paths:
           required: true
           schema: 
             enum: 
-              - EnergyConsumer
+              - ThreePhaseAcMeasurement
             type: string
       responses: 
         "200":
