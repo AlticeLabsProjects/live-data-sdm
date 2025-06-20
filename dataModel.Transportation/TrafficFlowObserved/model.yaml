@@ -453,6 +453,7 @@ TrafficFlowObserved:
         - binTrolley
         - sweepingMachine
         - cleaningTrolley
+        - lorryWithTrailer
       type: string
       x-ngsi:
         model: https://schema.org/Text
