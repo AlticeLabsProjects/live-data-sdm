@@ -298,7 +298,14 @@ Device:
         model: https://schema.org/Text
         type: Property
     deviceState:
-      description: State of this device from an operational point of view. Its value can be vendor dependent
+      description: State of this device from an operational point of view. Based on an enum
+      enum:
+        - active
+        - inactive
+        - offline
+        - poweredOff
+        - intermittent
+        - operational
       type: string
       x-ngsi:
         model: https://schema.org/Text
