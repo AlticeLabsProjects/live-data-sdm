@@ -51,5 +51,6 @@
         "weatherType": "fiware:weatherType",
         "windDirection": "fiware:windDirection",
         "windSpeed": "fiware:windSpeed"
+        "windType": "fiware:windType"
     }
 }
