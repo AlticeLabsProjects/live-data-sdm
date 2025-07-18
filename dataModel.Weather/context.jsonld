@@ -50,7 +50,7 @@
         "visibility": "fiware:visibility",
         "weatherType": "fiware:weatherType",
         "windDirection": "fiware:windDirection",
-        "windSpeed": "fiware:windSpeed"
+        "windSpeed": "fiware:windSpeed",
         "windType": "fiware:windType"
     }
 }
